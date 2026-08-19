@@ -1,0 +1,50 @@
+{
+  "profiles": {
+    "competitive": {
+      "label": "Competitive",
+      "power_scheme": "SCHEME_MIN",
+      "launch": []
+    },
+    "streaming": {
+      "label": "Streaming",
+      "power_scheme": "SCHEME_BALANCED",
+      "launch": []
+    },
+    "chill": {
+      "label": "Chill",
+      "power_scheme": "SCHEME_BALANCED",
+      "launch": []
+    },
+    "afk": {
+      "label": "AFK",
+      "power_scheme": "SCHEME_BALANCED",
+      "launch": []
+    }
+  },
+  "games": {
+    "minecraft": {
+      "aliases": ["майнкрафт", "майкрафт", "майн", "minecraft"],
+      "launcher": "C:\\Users\\paulp\\AppData\\Local\\Programs\\CurseForge Windows\\CurseForge.exe",
+      "processes": ["curseforge.exe", "minecraft.exe", "javaw.exe"],
+      "profile": "chill"
+    },
+    "roblox": {
+      "aliases": ["роблокс", "роблекс", "робукс", "roblox"],
+      "launcher": "D:\\roblox\\Bloxstrap\\Bloxstrap.exe",
+      "processes": ["robloxplayerbeta.exe", "bloxstrap.exe"],
+      "profile": "chill"
+    },
+    "steam": {
+      "aliases": ["стим", "стима", "стиме", "steam"],
+      "launcher": "D:\\Program_Files\\Steam\\steam.exe",
+      "processes": [],
+      "profile": "chill"
+    },
+    "epic": {
+      "aliases": ["эпик", "эпики", "эпикгеймс", "эрик", "epic", "epicgames"],
+      "launcher": "D:\\soft\\Epic Games\\Launcher\\Portal\\Binaries\\Win64\\EpicGamesLauncher.exe",
+      "processes": [],
+      "profile": "chill"
+    }
+  }
+}
