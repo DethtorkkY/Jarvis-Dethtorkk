@@ -1,0 +1,40 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: #e9fbff;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at 50% 36%, #092b3c 0%, #031018 38%, #010508 75%);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  opacity: .25;
+  background-image: linear-gradient(rgba(104, 233, 255, .08) 1px, transparent 1px), linear-gradient(90deg, rgba(104, 233, 255, .08) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(circle, black, transparent 70%);
+}
+.jarvis-shell { position: relative; z-index: 1; width: min(92vw, 560px); text-align: center; padding: 48px 20px; }
+.orb-wrap { position: relative; display: grid; place-items: center; width: 190px; height: 190px; margin: 0 auto 26px; }
+.orb, .orb-core { position: absolute; border-radius: 50%; }
+.orb { width: 180px; height: 180px; border: 2px solid #64e9ff; box-shadow: 0 0 14px #28cceb, inset 0 0 24px #28cceb; animation: spin 12s linear infinite; }
+.orb::before, .orb::after { content: ""; position: absolute; inset: 19px; border: 1px solid #0c8ca8; border-radius: 44% 56% 49% 51%; }
+.orb::after { inset: 38px; border-color: #b6f7ff; animation: spin 5s linear reverse infinite; }
+.orb-core { width: 42px; height: 42px; background: #a6f8ff; box-shadow: 0 0 18px 8px #1bd4fa, 0 0 65px 18px #087c9c; }
+.eyebrow { margin: 0; color: #76dce8; font-size: .68rem; font-weight: 700; letter-spacing: .35em; }
+h1 { margin: 7px 0 4px; font-size: clamp(3rem, 13vw, 5.4rem); font-weight: 300; letter-spacing: .17em; text-indent: .17em; text-shadow: 0 0 20px #129bb5; }
+.status { margin: 0; min-height: 1.6em; color: #9eeefa; font-size: 1.1rem; }
+.hint { color: #78aab2; margin: 10px 0 25px; }
+.listen-button { display: inline-block; border: 1px solid #5ee9ff; border-radius: 999px; padding: 13px 26px; color: #eaffff; font: inherit; font-weight: 600; cursor: pointer; text-decoration: none; background: rgba(25, 167, 195, .17); box-shadow: 0 0 18px rgba(48, 213, 239, .22); transition: .2s ease; }
+.listen-button:hover { background: rgba(45, 199, 228, .32); transform: translateY(-2px); }
+.mic { color: #74f3ff; margin-right: 8px; font-size: 1.25em; }
+.transcript { min-height: 1.4em; margin: 22px 0 0; color: #c8eef1; font-style: italic; }
+.listening .orb { animation-duration: 1.2s; border-color: #fff; box-shadow: 0 0 24px #78f7ff, inset 0 0 28px #28cceb; }
+.listening .orb-core { animation: pulse .75s ease-in-out infinite alternate; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { to { transform: scale(1.5); filter: brightness(1.35); } }
